@@ -3,25 +3,6 @@ from animals import *
 
 class Character:
     def __init__(char):
-        char.walkDown = [pygame.image.load('../images/character/human/short/humanFront1.png'),
-                         pygame.image.load('../images/character/human/short/humanFront2.png'),
-                         pygame.image.load('../images/character/human/short/humanFront3.png'),
-                         pygame.image.load('../images/character/human/short/humanFront4.png')]
-        
-        char.walkUp = [pygame.image.load('../images/character/human/short/humanBack1.png'),
-                      pygame.image.load('../images/character/human/short/humanBack2.png'),
-                      pygame.image.load('../images/character/human/short/humanBack3.png'),
-                      pygame.image.load('../images/character/human/short/humanBack4.png')]
-        
-        char.walkLeft = [pygame.image.load('../images/character/human/short/humanLeft1.png'),
-                        pygame.image.load('../images/character/human/short/humanLeft2.png'),
-                        pygame.image.load('../images/character/human/short/humanLeft3.png'),
-                        pygame.image.load('../images/character/human/short/humanLeft4.png')]
-        
-        char.walkRight = [pygame.image.load('../images/character/human/short/humanRight2.png'),
-                         pygame.image.load('../images/character/human/short/humanRight1.png'),
-                         pygame.image.load('../images/character/human/short/humanRight4.png'),
-                         pygame.image.load('../images/character/human/short/humanRight3.png')]
         char.up = False
         char.down = False
         char.right = False
@@ -64,43 +45,40 @@ class Character:
             char.down = False
             char.right = False
             char.left = True
-        elif keys[pygame.K_z]:
-            print('Apertou z')
         else:
             char.walkCount = 0
 
-    def spriteSheetChar(self,screen):
+    def spriteSheetChar(self,screen,skins):
         if char.walkCount +1 >= 12:
             char.walkCount = 0
         if char.up:
-            screen.blit(char.walkUp[char.walkCount//3],(char.x,char.y))
+            screen.blit(skins.walkUp[char.walkCount//3],(char.x,char.y))
             char.walkCount += 1
         elif char.down:
-            screen.blit(char.walkDown[char.walkCount//3],(char.x,char.y))
+            screen.blit(skins.walkDown[char.walkCount//3],(char.x,char.y))
             char.walkCount += 1
         elif char.right:
-            screen.blit(char.walkRight[char.walkCount//3],(char.x,char.y))
+            screen.blit(skins.walkRight[char.walkCount//3],(char.x,char.y))
             char.walkCount += 1
         elif char.left:
-            screen.blit(char.walkLeft[char.walkCount//3],(char.x,char.y))
+            screen.blit(skins.walkLeft[char.walkCount//3],(char.x,char.y))
             char.walkCount += 1
         else:
-            screen.blit(char.walkRight[0],(char.x,char.y))
+            screen.blit(skins.walkRight[0],(char.x,char.y))
         
-    def collision(self,houses):
+    def collision(self,general):
         if char.up:
-            if char.y <= houses.bottom and char.y >= houses.top and char.x <= houses.right and char.x >= houses.left:
+            if char.y <= general.bottom and char.y >= general.top and char.x <= general.right and char.x >= general.left:
                 char.y = char.prevy
         elif char.down:
-            if char.y <= houses.bottom and char.y >= houses.top and char.x <= houses.right and char.x >= houses.left:
+            if char.y <= general.bottom and char.y >= general.top and char.x <= general.right and char.x >= general.left:
                 char.y = char.prevy
         elif char.right:
-            if char.y <= houses.bottom and char.y >= houses.top and char.x <= houses.right and char.x >= houses.left:
+            if char.y <= general.bottom and char.y >= general.top and char.x <= general.right and char.x >= general.left:
                 char.x = char.prevx
         elif char.left:
-            if char.y <= houses.bottom and char.y >= houses.top and char.x <= houses.right and char.x >= houses.left:
+            if char.y <= general.bottom and char.y >= general.top and char.x <= general.right and char.x >= general.left:
                 char.x = char.prevx
-
+                
 #Inicialização de classes
 char = Character()
-animals = Horse()
