@@ -11,3 +11,6 @@ A retro game with pixel-based 3D design made entirely with the Pygame library.
 - This game uses the library <a href="https://www.pygame.org/docs/"> Pygame. </a> (1.9.6)
 - Python (3.7.4)
 
+## How to play?
+
+- Just download the project and run the file "main.py" :v
