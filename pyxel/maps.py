@@ -10,7 +10,7 @@ class Maps:
         maps.height = 600
         maps.screen = pygame.display.set_mode((maps.width, maps.height))
         maps.music = pygame.mixer.music.load('../music/ambience.mp3')
-        # pygame.mixer.music.play(-1)
+        pygame.mixer.music.play(-1)
 
 class Objects:
     def __init__(objects):

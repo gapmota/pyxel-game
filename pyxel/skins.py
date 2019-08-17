@@ -35,20 +35,20 @@ class Skins:
                                           pygame.image.load('../images/character/knight/knightFront3.png'),
                                           pygame.image.load('../images/character/knight/knightFront4.png')]
                     
-                        skins.walkUp = [pygame.image.load('../images/animals/modificated/horses/horseStop.png'),
-                                        pygame.image.load('../images/animals/modificated/horses/horseStop.png'),
-                                        pygame.image.load('../images/animals/modificated/horses/horseStop.png'),
-                                        pygame.image.load('../images/animals/modificated/horses/horseStop.png')]
+                        skins.walkUp = [pygame.image.load('../images/character/knight/knightBack1.png'),
+                                        pygame.image.load('../images/character/knight/knightBack2.png'),
+                                        pygame.image.load('../images/character/knight/knightBack3.png'),
+                                        pygame.image.load('../images/character/knight/knightBack4.png')]
                         
-                        skins.walkLeft = [pygame.image.load('../images/animals/modificated/horses/horseStop.png'),
-                                          pygame.image.load('../images/animals/modificated/horses/horseStop.png'),
-                                          pygame.image.load('../images/animals/modificated/horses/horseStop.png'),
-                                          pygame.image.load('../images/animals/modificated/horses/horseStop.png')]
+                        skins.walkLeft = [pygame.image.load('../images/character/knight/knightLeft2.png'),
+                                          pygame.image.load('../images/character/knight/knightLeft1.png'),
+                                          pygame.image.load('../images/character/knight/knightLeft4.png'),
+                                          pygame.image.load('../images/character/knight/knightLeft3.png')]
                     
-                        skins.walkRight = [pygame.image.load('../images/animals/modificated/horses/horseStop.png'),
-                                           pygame.image.load('../images/animals/modificated/horses/horseStop.png'),
-                                           pygame.image.load('../images/animals/modificated/horses/horseStop.png'),
-                                           pygame.image.load('../images/animals/modificated/horses/horseStop.png')]
+                        skins.walkRight = [pygame.image.load('../images/character/knight/knightRight2.png'),
+                                           pygame.image.load('../images/character/knight/knightRight1.png'),
+                                           pygame.image.load('../images/character/knight/knightRight4.png'),
+                                           pygame.image.load('../images/character/knight/knightRight3.png')]
                         skins.status = 0
                         pygame.time.delay(100)
                     elif skins.status == 0:
