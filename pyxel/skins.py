@@ -3,78 +3,38 @@ from character import *
 
 class Skins:
     def __init__(skins):
-        skins.walkDown = [pygame.image.load('../images/character/human/short/humanFront1.png'),
-                         pygame.image.load('../images/character/human/short/humanFront2.png'),
-                         pygame.image.load('../images/character/human/short/humanFront3.png'),
-                         pygame.image.load('../images/character/human/short/humanFront4.png')]
+        skins.stop = [pygame.image.load('../images/character/warriors/womanWR/left/warriorStopLeft1.png'),
+                          pygame.image.load('../images/character/warriors/womanWR/right/warriorStopRight1.png')]
+
+        skins.walkLeft = [pygame.image.load('../images/character/warriors/womanWR/left/warriorWalkLeft1.png'),
+                          pygame.image.load('../images/character/warriors/womanWR/left/warriorWalkLeft2.png'),
+                          pygame.image.load('../images/character/warriors/womanWR/left/warriorWalkLeft3.png'),
+                          pygame.image.load('../images/character/warriors/womanWR/left/warriorWalkLeft4.png'),
+                          pygame.image.load('../images/character/warriors/womanWR/left/warriorWalkLeft5.png'),
+                          pygame.image.load('../images/character/warriors/womanWR/left/warriorWalkLeft6.png'),
+                          pygame.image.load('../images/character/warriors/womanWR/left/warriorWalkLeft7.png'),
+                          pygame.image.load('../images/character/warriors/womanWR/left/warriorWalkLeft8.png')]
     
-        skins.walkUp = [pygame.image.load('../images/character/human/short/humanBack1.png'),
-                        pygame.image.load('../images/character/human/short/humanBack2.png'),
-                        pygame.image.load('../images/character/human/short/humanBack3.png'),
-                        pygame.image.load('../images/character/human/short/humanBack4.png')]
+        skins.walkRight = [pygame.image.load('../images/character/warriors/womanWR/right/warriorWalkRight1.png'),
+                           pygame.image.load('../images/character/warriors/womanWR/right/warriorWalkRight2.png'),
+                           pygame.image.load('../images/character/warriors/womanWR/right/warriorWalkRight3.png'),
+                           pygame.image.load('../images/character/warriors/womanWR/right/warriorWalkRight4.png'),
+                           pygame.image.load('../images/character/warriors/womanWR/right/warriorWalkRight5.png'),
+                           pygame.image.load('../images/character/warriors/womanWR/right/warriorWalkRight6.png'),
+                           pygame.image.load('../images/character/warriors/womanWR/right/warriorWalkRight7.png'),
+                           pygame.image.load('../images/character/warriors/womanWR/right/warriorWalkRight8.png')]
+
+        skins.fireLeft = [pygame.image.load('../images/character/warriors/womanWR/fire/fireLeft1.png'),
+                          pygame.image.load('../images/character/warriors/womanWR/fire/fireLeft2.png'),
+                          pygame.image.load('../images/character/warriors/womanWR/fire/fireLeft3.png'),
+                          pygame.image.load('../images/character/warriors/womanWR/fire/fireLeft4.png'),
+                          pygame.image.load('../images/character/warriors/womanWR/fire/fireLeft5.png')]
+
+        skins.fireRight = [pygame.image.load('../images/character/warriors/womanWR/fire/fireRight1.png'),
+                           pygame.image.load('../images/character/warriors/womanWR/fire/fireRight2.png'),
+                           pygame.image.load('../images/character/warriors/womanWR/fire/fireRight3.png'),
+                           pygame.image.load('../images/character/warriors/womanWR/fire/fireRight4.png'),
+                           pygame.image.load('../images/character/warriors/womanWR/fire/fireRight5.png')]
         
-        skins.walkLeft = [pygame.image.load('../images/character/human/short/humanLeft1.png'),
-                         pygame.image.load('../images/character/human/short/humanLeft2.png'),
-                         pygame.image.load('../images/character/human/short/humanLeft3.png'),
-                         pygame.image.load('../images/character/human/short/humanLeft4.png')]
-    
-        skins.walkRight = [pygame.image.load('../images/character/human/short/humanRight2.png'),
-                          pygame.image.load('../images/character/human/short/humanRight1.png'),
-                          pygame.image.load('../images/character/human/short/humanRight4.png'),
-                          pygame.image.load('../images/character/human/short/humanRight3.png')]
-
-        skins.status = 1
-    def interaction(self,mount):
-            interact = pygame.key.get_pressed()
-            dist = 3
-            if interact[pygame.K_z]:
-                if char.y <= mount.bottom + dist and char.y >= mount.top - dist and char.x <= mount.right + dist and char.x >= mount.left - dist:
-                    if skins.status == 1:
-                        skins.walkDown = [pygame.image.load('../images/character/knight/knightFront1.png'),
-                                          pygame.image.load('../images/character/knight/knightFront2.png'),
-                                          pygame.image.load('../images/character/knight/knightFront3.png'),
-                                          pygame.image.load('../images/character/knight/knightFront4.png')]
-                    
-                        skins.walkUp = [pygame.image.load('../images/character/knight/knightBack1.png'),
-                                        pygame.image.load('../images/character/knight/knightBack2.png'),
-                                        pygame.image.load('../images/character/knight/knightBack3.png'),
-                                        pygame.image.load('../images/character/knight/knightBack4.png')]
-                        
-                        skins.walkLeft = [pygame.image.load('../images/character/knight/knightLeft2.png'),
-                                          pygame.image.load('../images/character/knight/knightLeft1.png'),
-                                          pygame.image.load('../images/character/knight/knightLeft4.png'),
-                                          pygame.image.load('../images/character/knight/knightLeft3.png')]
-                    
-                        skins.walkRight = [pygame.image.load('../images/character/knight/knightRight2.png'),
-                                           pygame.image.load('../images/character/knight/knightRight1.png'),
-                                           pygame.image.load('../images/character/knight/knightRight4.png'),
-                                           pygame.image.load('../images/character/knight/knightRight3.png')]
-                        skins.status = 0
-                        pygame.time.delay(100)
-                    elif skins.status == 0:
-                        skins.walkDown = [pygame.image.load('../images/character/human/short/humanFront1.png'),
-                                          pygame.image.load('../images/character/human/short/humanFront2.png'),
-                                          pygame.image.load('../images/character/human/short/humanFront3.png'),
-                                          pygame.image.load('../images/character/human/short/humanFront4.png')]
-
-                        skins.walkUp = [pygame.image.load('../images/character/human/short/humanBack1.png'),
-                                        pygame.image.load('../images/character/human/short/humanBack2.png'),
-                                        pygame.image.load('../images/character/human/short/humanBack3.png'),
-                                        pygame.image.load('../images/character/human/short/humanBack4.png')]
-
-                        skins.walkLeft = [pygame.image.load('../images/character/human/short/humanLeft1.png'),
-                                          pygame.image.load('../images/character/human/short/humanLeft2.png'),
-                                          pygame.image.load('../images/character/human/short/humanLeft3.png'),
-                                          pygame.image.load('../images/character/human/short/humanLeft4.png')]
-
-                        skins.walkRight = [pygame.image.load('../images/character/human/short/humanRight2.png'),
-                                           pygame.image.load('../images/character/human/short/humanRight1.png'),
-                                           pygame.image.load('../images/character/human/short/humanRight4.png'),
-                                           pygame.image.load('../images/character/human/short/humanRight3.png')]
-                        skins.status = 1
-                        pygame.time.delay(100)
-                        
 #Inicialização de classes
-skins = Skins()
-
-                    
+skins = Skins()   

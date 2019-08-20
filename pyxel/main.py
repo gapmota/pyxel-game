@@ -16,22 +16,15 @@ clock = pygame.time.Clock()
 while True:
     clock.tick(27)
     maps.screen.blit(maps.map1, (0,0))
-    
-    for general in objects.general:
-        char.collision(general)
-        
-    for mount in objects.mount:
-        skins.interaction(mount)
-    
-    char.spriteSheetChar(maps.screen,skins)
-    char.walkingChar()
-    animals = Horse()        
-    
-    pygame.display.update()
-    
 
+    char.walkingChar(maps.screen,skins) 
+    char.spriteSheetChar(maps.screen,skins)
+    
+    pygame.display.flip()
+    
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
+            exit(0)
             break
         break

@@ -7,5 +7,5 @@ class Horse:
 
         horse.x = 410
         horse.y = 340
-        
         maps.screen.blit(horse.stop[0],(horse.x,horse.y))
+
