@@ -5,11 +5,11 @@ class Character:
     def __init__(char):
         char.right = False
         char.left = False
-        char.lastDirection = 'left'
-        char.vel = 2.5
+        char.lastDirection = 'right'
+        char.vel = 3.5
         char.walkCount = 0
         char.countAux = 0
-        char.x = 20
+        char.x = 0
         char.y = 450
         char.prevx = char.x
         char.prevy = char.y
@@ -38,6 +38,8 @@ class Character:
                 pygame.display.flip()
                 char.countAux += 1
                 maps.screen.blit(maps.map1, (0,0))
+            screen.blit(skins.fireLeft[0],(char.x-8,char.y))
+                
         elif keys[pygame.K_z] and char.lastDirection ==  'right':
             char.right = False
             char.left = False
@@ -47,6 +49,7 @@ class Character:
                 pygame.display.flip()
                 char.countAux += 1
                 maps.screen.blit(maps.map1, (0,0))
+            screen.blit(skins.fireRight[0],(char.x+8,char.y))
         else:
             char.right = False
             char.left = False
@@ -65,7 +68,7 @@ class Character:
         elif char.left:
             screen.blit(skins.walkLeft[char.walkCount//5],(char.x,char.y))
             char.walkCount += 1
-                 
+                  
     def collision(self,general):
         if char.right:
             if char.y <= general.bottom and char.y >= general.top and char.x <= general.right and char.x >= general.left:
@@ -76,3 +79,4 @@ class Character:
         
 #Inicialização de classes
 char = Character()
+

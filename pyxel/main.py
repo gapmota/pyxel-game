@@ -17,10 +17,10 @@ while True:
     clock.tick(27)
     maps.screen.blit(maps.map1, (0,0))
 
-    char.walkingChar(maps.screen,skins) 
     char.spriteSheetChar(maps.screen,skins)
+    char.walkingChar(maps.screen,skins) 
     
-    pygame.display.flip()
+    pygame.display.update()
     
     for event in pygame.event.get():
         if event.type == QUIT:

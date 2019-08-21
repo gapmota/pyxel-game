@@ -4,7 +4,7 @@ from character import *
 class Skins:
     def __init__(skins):
         skins.stop = [pygame.image.load('../images/character/warriors/womanWR/left/warriorStopLeft1.png'),
-                          pygame.image.load('../images/character/warriors/womanWR/right/warriorStopRight1.png')]
+                      pygame.image.load('../images/character/warriors/womanWR/right/warriorStopRight1.png')]
 
         skins.walkLeft = [pygame.image.load('../images/character/warriors/womanWR/left/warriorWalkLeft1.png'),
                           pygame.image.load('../images/character/warriors/womanWR/left/warriorWalkLeft2.png'),
@@ -37,4 +37,4 @@ class Skins:
                            pygame.image.load('../images/character/warriors/womanWR/fire/fireRight5.png')]
         
 #Inicialização de classes
-skins = Skins()   
+skins = Skins()  
