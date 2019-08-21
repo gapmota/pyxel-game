@@ -17,4 +17,6 @@ A retro game with pixel-based 2D design made entirely with the Pygame library.
 
 ## Demo
 
+<kbd>
 <img src="https://github.com/mottafoka/pyxel-game/blob/master/images/maps/demo.png">
+ </kbd>
