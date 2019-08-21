@@ -14,3 +14,7 @@ A retro game with pixel-based 3D design made entirely with the Pygame library.
 ## How to play?
 
 - Just download the project and run the file "main.py" :v
+
+## Demo
+
+<img src="https://github.com/mottafoka/pyxel-game/blob/master/images/maps/demo.png">
