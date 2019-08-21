@@ -4,7 +4,7 @@
 
 ## Whats is "Pyxel"?
 
-A retro game with pixel-based 3D design made entirely with the Pygame library.
+A retro game with pixel-based 2D design made entirely with the Pygame library.
 
 ## Tools
 
